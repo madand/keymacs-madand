@@ -1,5 +1,7 @@
-! Keymacs madand keymap
+! Keymacs madand keyboard layout for Linux Console
+! Copy this file to /usr/share/kbd/keymaps/
 ! https://github.com/madand/keymacs-madand
+
 keymaps 0-2,4-6,8-9,12
 alt_is_meta
 include "linux-with-two-alt-keys.inc"

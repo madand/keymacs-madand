@@ -1,4 +1,4 @@
- 
+
 * keymacs-madand
 
 This is my modification of the [[https://github.com/keyboard-ergonomics/keymacs][Keymacs]] keyboard layout.
@@ -10,6 +10,10 @@ This is my modification of the [[https://github.com/keyboard-ergonomics/keymacs]
 *** X11 XKB Keymap
 
 #+begin_src text :tangle madand
+  // This is a definition of Keymacs madand keyboard layout for XKB
+  // Copy this file to /usr/share/X11/xkb/symbols/
+  // https://github.com/madand/keymacs-madand
+
   partial alphanumeric_keys
   xkb_symbols "basic" {
       include "us(basic)"
@@ -89,8 +93,10 @@ add the following line to the ~/etc/vconsole.conf~ file:
 Here is the contents of the keymap file ~keymacs-madand.map~:
 
 #+begin_src text :tangle keymacs-madand.map
-  ! Keymacs madand keymap
+  ! Keymacs madand keyboard layout for Linux Console
+  ! Copy this file to /usr/share/kbd/keymaps/
   ! https://github.com/madand/keymacs-madand
+
   keymaps 0-2,4-6,8-9,12
   alt_is_meta
   include "linux-with-two-alt-keys.inc"
@@ -176,5 +182,6 @@ Here is the contents of the keymap file ~keymacs-madand.map~:
 
 ** License
 
-[[https://licensebuttons.net/p/zero/1.0/88x31.png]]
+[[https://creativecommons.org/publicdomain/zero/1.0][https://licensebuttons.net/p/zero/1.0/88x31.png]]
+
 [[https://creativecommons.org/publicdomain/zero/1.0/][CC0]] / Public Domain
