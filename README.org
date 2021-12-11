@@ -1,0 +1,180 @@
+ 
+* keymacs-madand
+
+This is my modification of the [[https://github.com/keyboard-ergonomics/keymacs][Keymacs]] keyboard layout.
+
+[[file:./madand-keymacs.png]]
+
+** Keymap files
+
+*** X11 XKB Keymap
+
+#+begin_src text :tangle madand
+  partial alphanumeric_keys
+  xkb_symbols "basic" {
+      include "us(basic)"
+
+      name[Group1]= "English (Keymacs madand)";
+
+      // Numeric row
+      key <TLDE> { [     asciitilde,	grave	]	};
+      // Keys 1, 2, ... 0 left as they are in QWERTY
+      key <AE09> { [	    9,	braceleft	]	};
+      key <AE10> { [	    0,	braceright	]	};
+      key <AE11> { [ parenleft,	question 	]	};
+      key <AE12> { [ parenright,	plus		] };
+
+      // QWER row
+      key <AD01> {	[	  q,	Q 		]	};
+      key <AD02> {	[	  b,	B		]	};
+      key <AD03> {	[	  p,	P		]	};
+      key <AD04> {	[	  f,	F		]	};
+      key <AD05> {	[	  g,	G		]	};
+      key <AD06> {	[	  v,	V		]	};
+      key <AD07> {	[	  c,	C		]	};
+      key <AD08> {	[	  l,	L		]	};
+      key <AD09> {	[	  y,	Y		]	};
+      key <AD10> {	[    apostrophe, quotedbl	]	};
+      key <AD11> { 	[	slash,	bracketleft	]	};
+      key <AD12> { 	[	colon,	bracketright	]	};
+
+      // ASDF row
+      key <AC01> {	[	  r,	R 		]	};
+      key <AC02> {	[	  a,	A		]	};
+      key <AC03> {	[	  e,	E		]	};
+      key <AC04> {	[	  n,	N		]	};
+      key <AC05> {	[	  s,	S		]	};
+      key <AC06> {	[	  d,	D		]	};
+      key <AC07> {	[	  o,	O		]	};
+      key <AC08> {	[	  t,	T		]	};
+      key <AC09> {	[	  i,	I		]	};
+      key <AC10> {	[	  h,	H		]	};
+      key <AC11> {	[     minus,	underscore	]	};
+
+      // ZXCV row
+      key <AB01> {	[	  z,	Z 		]	};
+      key <AB02> {	[	  x,	X		]	};
+      key <AB03> {	[	  u,	U		]	};
+      key <AB04> {	[	  k,	K		]	};
+      key <AB05> {	[	  j,	J		]	};
+      key <AB06> {	[	  w,	W		]	};
+      key <AB07> {	[	  m,	M		]	};
+      key <AB08> {	[     comma,	less		]	};
+      key <AB09> {	[    period,	greater		]	};
+      key <AB10> {	[	semicolon,	equal	]	};
+  };
+#+end_src
+
+*** Linux Console Keymap
+
+First, you should copy the console keymap file to your system's directory:
+
+#+begin_src shell
+  sudo cp keymacs-madand.map /usr/share/kbd/keymaps/
+#+end_src
+
+You may load the keymap right away.  Beware, this will affect all consoles.
+
+#+begin_src shell
+  loadkeys madand-keymacs
+#+end_src
+
+To load the keymap at system boot, if you run Arch Linux based distro,
+add the following line to the ~/etc/vconsole.conf~ file:
+
+#+begin_src shell
+  KEYMAP=/usr/share/kbd/keymaps/keymacs-madand.map
+#+end_src
+
+Here is the contents of the keymap file ~keymacs-madand.map~:
+
+#+begin_src text :tangle keymacs-madand.map
+  ! Keymacs madand keymap
+  ! https://github.com/madand/keymacs-madand
+  keymaps 0-2,4-6,8-9,12
+  alt_is_meta
+  include "linux-with-two-alt-keys.inc"
+  strings as usual
+  ! --------------------------------------------------------------------------
+  ! Row 1
+  ! --------------------------------------------------------------------------
+  keycode   1 = Escape
+  ! --------------------------------------------------------------------------
+  ! Row 2
+  ! --------------------------------------------------------------------------
+  keycode  41 = asciitilde     grave
+  keycode   2 = one            exclam
+  keycode   3 = two            at
+  keycode   4 = three          numbersign
+  keycode   5 = four           dollar
+  keycode   6 = five           percent
+  keycode   7 = six            asciicircum
+  keycode   8 = seven          ampersand
+  keycode   9 = eight          asterisk
+  keycode  10 = nine           braceleft
+  keycode  11 = zero           braceright
+  keycode  12 = parenleft      question
+  keycode  13 = parenright     plus
+  keycode  14 = Delete
+  ! --------------------------------------------------------------------------
+  ! Row 3
+  ! --------------------------------------------------------------------------
+  keycode  15 = Tab
+  keycode  16 = q
+  keycode  17 = b
+  keycode  18 = p
+  keycode  19 = f
+  keycode  20 = g
+  keycode  21 = v
+  keycode  22 = c
+  keycode  23 = l
+  keycode  24 = y
+  keycode  25 = apostrophe     quotedbl
+  keycode  26 = slash          bracketleft
+  keycode  27 = colon          bracketright
+  keycode  28 = Return
+  ! --------------------------------------------------------------------------
+  ! Row 4
+  ! --------------------------------------------------------------------------
+  keycode  58 = Caps_Lock
+  keycode  30 = r
+  keycode  31 = a
+  keycode  32 = e
+  keycode  33 = n
+  keycode  34 = s
+  keycode  35 = d
+  keycode  36 = o
+  keycode  37 = t
+  keycode  38 = i
+  keycode  39 = h
+  keycode  40 = minus          underscore
+  keycode  43 = backslash      bar
+  ! --------------------------------------------------------------------------
+  ! Row 5
+  ! --------------------------------------------------------------------------
+  keycode  42 = Shift
+  keycode  44 = z
+  keycode  45 = x
+  keycode  46 = u
+  keycode  47 = k
+  keycode  48 = j
+  keycode  49 = w
+  keycode  50 = m
+  keycode  51 = comma          less
+  keycode  52 = period         greater
+  keycode  53 = semicolon      equal
+  keycode  54 = Shift
+  ! --------------------------------------------------------------------------
+  ! Row 6
+  ! --------------------------------------------------------------------------
+  keycode  29 = Control
+  keycode  56 = Alt
+  keycode  57 = space
+  keycode  97 = Control
+
+#+end_src
+
+** License
+
+[[https://licensebuttons.net/p/zero/1.0/88x31.png]]
+[[https://creativecommons.org/publicdomain/zero/1.0/][CC0]] / Public Domain

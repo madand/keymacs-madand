@@ -1,0 +1,82 @@
+! Keymacs madand keymap
+! https://github.com/madand/keymacs-madand
+keymaps 0-2,4-6,8-9,12
+alt_is_meta
+include "linux-with-two-alt-keys.inc"
+strings as usual
+! --------------------------------------------------------------------------
+! Row 1
+! --------------------------------------------------------------------------
+keycode   1 = Escape
+! --------------------------------------------------------------------------
+! Row 2
+! --------------------------------------------------------------------------
+keycode  41 = asciitilde     grave
+keycode   2 = one            exclam
+keycode   3 = two            at
+keycode   4 = three          numbersign
+keycode   5 = four           dollar
+keycode   6 = five           percent
+keycode   7 = six            asciicircum
+keycode   8 = seven          ampersand
+keycode   9 = eight          asterisk
+keycode  10 = nine           braceleft
+keycode  11 = zero           braceright
+keycode  12 = parenleft      question
+keycode  13 = parenright     plus
+keycode  14 = Delete
+! --------------------------------------------------------------------------
+! Row 3
+! --------------------------------------------------------------------------
+keycode  15 = Tab
+keycode  16 = q
+keycode  17 = b
+keycode  18 = p
+keycode  19 = f
+keycode  20 = g
+keycode  21 = v
+keycode  22 = c
+keycode  23 = l
+keycode  24 = y
+keycode  25 = apostrophe     quotedbl
+keycode  26 = slash          bracketleft
+keycode  27 = colon          bracketright
+keycode  28 = Return
+! --------------------------------------------------------------------------
+! Row 4
+! --------------------------------------------------------------------------
+keycode  58 = Caps_Lock
+keycode  30 = r
+keycode  31 = a
+keycode  32 = e
+keycode  33 = n
+keycode  34 = s
+keycode  35 = d
+keycode  36 = o
+keycode  37 = t
+keycode  38 = i
+keycode  39 = h
+keycode  40 = minus          underscore
+keycode  43 = backslash      bar
+! --------------------------------------------------------------------------
+! Row 5
+! --------------------------------------------------------------------------
+keycode  42 = Shift
+keycode  44 = z
+keycode  45 = x
+keycode  46 = u
+keycode  47 = k
+keycode  48 = j
+keycode  49 = w
+keycode  50 = m
+keycode  51 = comma          less
+keycode  52 = period         greater
+keycode  53 = semicolon      equal
+keycode  54 = Shift
+! --------------------------------------------------------------------------
+! Row 6
+! --------------------------------------------------------------------------
+keycode  29 = Control
+keycode  56 = Alt
+keycode  57 = space
+keycode  97 = Control
