@@ -3,7 +3,7 @@
 // https://github.com/madand/keymacs-madand
 
 partial alphanumeric_keys
-xkb_symbols "basic" {
+xkb_symbols "keymacs" {
     include "us(basic)"
 
     name[Group1]= "English (Keymacs madand)";
